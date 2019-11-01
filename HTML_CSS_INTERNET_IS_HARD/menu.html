@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Awesome!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1200px;
+      font-size: 18px;
+      font-family: sans-serif;
+      color: #5D6063;
+    }
+
+    a:link,
+    a:visited {
+      color: #5D6063;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 50px;
+      background: #D6E9FE;
+    }
+
+    .menu {
+      margin-top: 15px;
+    }
+
+    .menu>li {
+      display: inline;
+      margin-right: 50px;
+    }
+
+    .menu>li:last-of-type {
+      margin-right: 0;
+    }
+
+
+
+    .features-menu {
+      display: none;
+      flex-direction: column;
+      background: #B2D6FF;
+      border-radius: 5px;
+      padding-top: 60px;
+      position: absolute;
+      /* Add these */
+      top: -25px;
+      left: -30px;
+      z-index: 1;
+
+    }
+
+    .features-menu li {
+      list-style: none;
+      border-bottom: 1px solid #FFF;
+
+      padding: 0 40px 10px 20px;
+      margin: 10px;
+    }
+
+    .features-menu li:last-of-type {
+      border-bottom: none;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown>span {
+      z-index: 2;
+      position: relative;
+      /* This is important! */
+      cursor: pointer;
+    }
+
+    .dropdown:hover .features-menu {
+      display: flex;
+      flex-direction: column;
+      background: #B2D6FF;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class='header'>
+    <div class='logo'><img src='images/awesome-logo.svg' /></div>
+    <ul class='menu'>
+      <li class='dropdown'><span>Features &#9662;</span>
+        <ul class='features-menu'>
+          <!-- Start of submenu -->
+          <li><a href='#'>Harder</a></li>
+          <li><a href='#'>Better</a></li>
+          <li><a href='#'>Faster</a></li>
+          <li><a href='#'>Stronger</a></li>
+        </ul> <!-- End of submenu -->
+      </li>
+      <li><a href='#'>Blog</a></li> <!-- These are the same -->
+      <li><a href='#'>Subscribe</a></li>
+      <li><a href='#'>About</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
